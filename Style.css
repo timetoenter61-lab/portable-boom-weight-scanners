@@ -1,0 +1,294 @@
+/* --- RESET & DESIGN VARIABLE SYSTEM --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-clean: #f9fafb;      /* Bright, modern slate white */
+    --primary-trade: #ea580c; /* High-vis safety orange / amber */
+    --steel: #111827;         /* Deep structural steel charcoal */
+    --plaster: #ffffff;
+    --border-thick: 4px;      /* Heavy industrial lines */
+}
+
+body {
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Hard-hitting headers */
+    background-color: var(--bg-clean);
+    color: var(--steel);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* --- HERO BLOCK --- */
+.hero {
+    background-color: var(--steel);
+    color: var(--plaster);
+    text-align: left;
+    padding: 100px 20px;
+    border-bottom: var(--border-thick) solid var(--primary-trade);
+}
+
+.badge {
+    background-color: var(--primary-trade);
+    color: var(--plaster);
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+    max-width: 700px;
+    color: #9ca3af;
+    margin-bottom: 35px;
+}
+
+/* --- VALUE SUB-BAR --- */
+.value-bar {
+    background-color: #f3f4f6;
+    border-bottom: var(--border-thick) solid var(--steel);
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 25px 20px;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+/* --- BUTTON ELEMENTS --- */
+.btn {
+    display: inline-block;
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: var(--border-thick) solid var(--steel);
+    letter-spacing: 1px;
+    transition: transform 0.05s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-trade);
+    color: var(--plaster);
+    border-color: var(--primary-trade);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--steel);
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+}
+
+/* --- INDUSTRIAL SERVICE CARDS --- */
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 6px;
+    background-color: var(--primary-trade);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: var(--plaster);
+    border: var(--border-thick) solid var(--steel);
+    padding: 35px;
+    box-shadow: 10px 10px 0px var(--steel); /* Brutalist builder shadow */
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--steel);
+}
+
+.card p {
+    font-family: sans-serif;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--steel);
+}
+
+.card ul {
+    list-style: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.card li {
+    margin-bottom: 12px;
+    color: var(--steel);
+}
+
+/* --- PAYPAL BOX --- */
+.paypal-box {
+    border: 4px dashed var(--steel);
+    background-color: #fff7ed;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 6px 6px 0px var(--primary-trade);
+}
+
+.paypal-box h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.paypal-box p {
+    font-family: sans-serif;
+    margin-bottom: 25px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--steel);
+    color: #6b7280;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    border-top: var(--border-thick) solid var(--steel);
+}
+
+/* --- PORTABLE BOOM SHOWCASE PAGE --- */
+.showcase-page {
+    min-height: 100vh;
+    background-color: var(--steel);
+    color: var(--plaster);
+}
+
+.showcase-nav {
+    padding: 20px;
+    border-bottom: var(--border-thick) solid var(--primary-trade);
+}
+
+.showcase-nav .container {
+    padding: 0 20px;
+}
+
+.showcase-nav .btn {
+    padding: 10px 18px;
+    color: var(--plaster);
+    border-color: var(--plaster);
+}
+
+.showcase-image {
+    display: block;
+    width: 100%;
+    max-width: 1500px;
+    max-height: calc(100vh - 88px);
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 38px 16px;
+    }
+
+    .hero {
+        padding: 64px 16px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px 18px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        margin-bottom: 28px;
+    }
+
+    .grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .value-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    .card {
+        padding: 24px;
+        box-shadow: 6px 6px 0 var(--steel);
+    }
+
+    .card h3 {
+        font-size: 1.7rem;
+    }
+
+    .showcase-nav {
+        padding: 14px 16px;
+    }
+
+    .showcase-nav .container {
+        padding: 0;
+    }
+
+    .showcase-nav .btn {
+        width: auto;
+    }
+}
+ 
