@@ -217,11 +217,32 @@ footer {
     border-color: var(--plaster);
 }
 
+.showcase-layout {
+    min-height: calc(100vh - 88px);
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 48px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.showcase-copy h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-bottom: 24px;
+}
+
+.showcase-copy p {
+    color: #d1d5db;
+    font-family: Arial, sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
 .showcase-image {
     display: block;
     width: 100%;
-    max-width: 1500px;
-    max-height: calc(100vh - 88px);
     margin: 0 auto;
     object-fit: contain;
 }
@@ -289,6 +310,17 @@ footer {
 
     .showcase-nav .btn {
         width: auto;
+    }
+
+    .showcase-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding-top: 38px;
+        padding-bottom: 38px;
+    }
+
+    .showcase-copy h1 {
+        font-size: 2.35rem;
     }
 }
  
